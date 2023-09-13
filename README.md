@@ -41,7 +41,7 @@ Note that in the .mat file, the original 15 attributes have been transformed int
 
 ## Dataset Download
 
-The dataset is available for [Download](https://drive.google.com/file/d/1p4pezNgTb681Gi3UcvOHXB5zYMo7qvpY/view?usp=sharing) now!
+The dataset is available for [Download](https://drive.google.com/file/d/1hzieEPlXfjkN3V3XWqI5rAwpF_sCF1K9/view?usp=sharing) now!
 
 
 
@@ -64,7 +64,7 @@ ImageName: **P**0006**T**0214**A**0**C**0**F**1831.jpg
 
 ### Aerial-Ground
 
-In the aerial-ground setting, there are 1,701 aerial query images, and  3,255 ground gallery images for 189 identities.
+In the aerial-ground setting, there are 1,701 aerial query images, and  3,331 ground gallery images for 189 identities.
 
 ### Ground-Aerial
 
