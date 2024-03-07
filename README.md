@@ -2,21 +2,28 @@
 
 **Official repository for ICME2023: Aerial-Ground Person Re-ID**
 
-![](imgs/samples.jpg)
+![Sample Images](imgs/samples.jpg)
 
 The evaluation code will be added soon.
 
 ## Paper
 
-[[arXiv](https://arxiv.org/abs/2303.08597v3)] [[ResearchGate](https://www.researchgate.net/publication/369266098_Aerial-Ground_Person_Re-ID)]
+- [arXiv](https://arxiv.org/abs/2303.08597v3)
+- [ResearchGate](https://www.researchgate.net/publication/369266098_Aerial-Ground_Person_Re-ID)
 
-## About dataset
-We have annotated 15 attributes for the [AG-ReID dataset](https://drive.google.com/file/d/1p4pezNgTb681Gi3UcvOHXB5zYMo7qvpY/view?usp=sharing). The dataset comprises of 199 distinct identities for training and another 189 for testing. These attributes are annotated at the identity level, which means that the file contains 15 x 199 attributes for training and 15 x 189 attributes for testing. In this context, the label "image_index" represents the identity. You can find these annotations in the file named qut_attribute_v4_88_attributes.mat.
+## News
+
+- **2023-03-07**: We have released [AG-ReID.v2](https://github.com/huynguyen792/AG-ReID.v2).
+- **2022-09-13**: The AG-ReID dataset is now available for [download](https://drive.google.com/file/d/1hzieEPlXfjkN3V3XWqI5rAwpF_sCF1K9/view?usp=sharing).
+
+## About the Dataset
+
+We have annotated 15 attributes for the [AG-ReID dataset](https://drive.google.com/file/d/1p4pezNgTb681Gi3UcvOHXB5zYMo7qvpY/view?usp=sharing). The dataset comprises 199 distinct identities for training and another 189 for testing. These attributes are annotated at the identity level, which means that the file contains 15 x 199 attributes for training and 15 x 189 attributes for testing. In this context, the label "image_index" represents the identity. You can find these annotations in the file named qut_attribute_v4_88_attributes.mat.
 
 The 15 attributes include:
 
-| attribute | representation in file | label |
-| :----: | :----: | :----: |
+| Attribute | Representation in File | Label |
+| :-------: | :-------------------: | :---: |
 | Gender | gender | male(0), female(1), unknown(2) |
 | Ages | age | 0-11(0), 12-17(1), 18-24(2), 25-34(3), 35-44(4), 45-54(5), 55-64(6), >65(7), Unknown(8) |
 | Height | height | Child(0), Short(1), Medium(2), Tall(3), Unknown(4) |
@@ -37,44 +44,37 @@ Note that in the .mat file, the original 15 attributes have been transformed int
 
 ## Sample
 
-![](imgs/sample_image.jpg)
+![Sample Image](imgs/sample_image.jpg)
 
 ## Dataset Download
 
 The dataset is available for [Download](https://drive.google.com/file/d/1hzieEPlXfjkN3V3XWqI5rAwpF_sCF1K9/view?usp=sharing) now!
 
-
-
 ## Annotations
 
 ImageName: **P**0006**T**0214**A**0**C**0**F**1831.jpg
 
-**P**0001: (**P**ersonID) unique identity for the main subject in current video
-
-**T**MMDD0/MMDD1: (**T**imestamp) timestamp of the video, indicating Month / Date / AM (MMDD0) or PM (MMDD1)
-
-**A**0/1/2: (**A**ltitude) indicates the altitude level - low (0), medium (1), or high (2)
-
-**C**0/3: (**C**amera) indicates the type of camera used - UAV - RGB (0) or CCTV - RGB (3)
-
-**F**2281: (**F**rame) represents a specific frame from video
-
+- **P**0001: (**P**ersonID) unique identity for the main subject in the current video
+- **T**MMDD0/MMDD1: (**T**imestamp) timestamp of the video, indicating Month / Date / AM (MMDD0) or PM (MMDD1)
+- **A**0/1/2: (**A**ltitude) indicates the altitude level - low (0), medium (1), or high (2)
+- **C**0/3: (**C**amera) indicates the type of camera used - UAV - RGB (0) or CCTV - RGB (3)
+- **F**2281: (**F**rame) represents a specific frame from the video
 
 ## Person Re-ID Evaluation Protocols
 
 ### Aerial-Ground
 
-In the aerial-ground setting, there are 1,701 aerial query images, and  3,331 ground gallery images for 189 identities.
+In the aerial-ground setting, there are 1,701 aerial query images and 3,331 ground gallery images for 189 identities.
 
 ### Ground-Aerial
 
-In the ground-aerial setting, there are 962 ground query images, and 7,204 aerial gallery images for 189 identities.
+In the ground-aerial setting, there are 962 ground query images and 7,204 aerial gallery images for 189 identities.
 
 ### Results
 
 #### Rank-1 Evaluation (R50 backbone)
 
-| Models   | Aerial &#8594;  Ground | Ground &#8594; Aerial |
+| Models   | Aerial &#8594; Ground | Ground &#8594; Aerial |
 |----------|------------------------|-----------------------|
 | BoT(R50) | 73.83                  | 72.45                 |
 | MGN(R50) | 75.93                  | **79.42**             |
@@ -89,10 +89,8 @@ In the ground-aerial setting, there are 962 ground query images, and 7,204 aeria
 | BoT(ViT)                | 81.28                     | 82.64                     |
 | BoT(ViT) + Explainable  | **81.47**                 | **82.85**                 |
 
-
 ## Citation
-
-```bibtex
+```
 @misc{nguyen2023aerialground,
       title={Aerial-Ground Person Re-ID}, 
       author={Huy Nguyen and Kien Nguyen and Sridha Sridharan and Clinton Fookes},
@@ -102,7 +100,6 @@ In the ground-aerial setting, there are 962 ground query images, and 7,204 aeria
       primaryClass={cs.CV}
 }
 ```
-
 ## Contact
 
 `thanhnhathuy.nguyen@hdr.qut.edu.au`
